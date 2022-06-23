@@ -1,0 +1,21 @@
+<head>
+
+</head>
+<body>
+    <h1>Update ({{post.title}}) Post</h1>
+    <form class="postCreationForm" action="/update/confirm" method="post">
+        <div class="inputSection">
+            <span>New Post Title:</span>
+            <input type="text" value="{{post.title}}" name="postTitle">
+        </div>
+        <div class="inputSection">
+            <span>Post Category:</span>
+            <input type="text" value="{{post.category}}" name="category">
+        </div>
+        <div class="inputSection">
+            <input type="textbox" value="{{post.description}}" name="contents">
+        </div>
+        <button name="id" value="{{post.id}}">Submit</button>
+    </form>
+</body>
+</html>

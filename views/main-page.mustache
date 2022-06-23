@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Posts</h1>
+        <form class="sortForm" action="/sort" method="post">
+            <span>Category</span>
+            <input type="text" name="category">
+            <button>Submit</button>
+        </form>
+        <a href="/">Clear Sort</a>
+        <ul class="postContainer">
+            {{#posts}}
+            <li class="postItem">
+                <h4>{{dataValues.title}}</h4>
+                <span>Category: {{dataValues.category}}</span>
+                <p>{{dataValues.description}}</p>
+                <a href="/update/{{dataValues.id}}">Update</a>
+                <a href="/delete/{{dataValues.id}}">Delete</a>
+            </li>
+            {{/posts}}
+        </ul>
+        <div class="footNavigation">
+            <form action="/posts/">
+                <button>Make new post</button>
+            </form>
+        </div>
+    </body>
+</html>
